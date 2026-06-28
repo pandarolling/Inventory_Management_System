@@ -80,6 +80,39 @@
 
         <div class="separator-line"> </div>
         <div class="mid-area">
+
+            <!-- ============================================================= -->
+            <!-- TODO: FEATURES TO ADD ON THIS PAGE (Dashboard / index.html)    -->
+            <!-- ============================================================= -->
+
+            <!-- HTML FEATURES:
+                 1. Add a page heading: <h2>Dashboard</h2> above the data-grid
+                 2. Add a "Last Updated" timestamp: <p id="last-updated">Last updated: --</p>
+            -->
+
+            <!-- JS FEATURES (use script.js):
+                 1. SEARCH BAR FILTER — when user types in #search-bar, filter
+                    the table rows to only show matching product names or SKUs
+                    Hint: document.getElementById("search-bar").addEventListener("input", ...)
+                          loop through tbody tr, use .textContent.toLowerCase().includes(...)
+
+                 2. EDIT BUTTON — when "Edit" is clicked, turn that row's cells
+                    into <input> fields so user can change values inline
+                    Hint: querySelectorAll(".btn-edit") → forEach → addEventListener("click", ...)
+
+                 3. DELETE ROW — add a "Delete" button next to Edit in each row,
+                    when clicked, remove that <tr> from the table
+                    Hint: button.closest("tr").remove()
+
+                 4. DYNAMIC CARD COUNTS — update the metric numbers in the cards
+                    based on actual table data (count rows, sum quantities, etc.)
+                    Hint: document.querySelectorAll("tbody tr").length
+
+                 5. ADD ROW — make the "+ Add Product" button also able to add a
+                    new blank row to the table (in addition to linking to add-product page)
+                    Hint: createElement("tr"), appendChild()
+            -->
+
             <section class="data-grid">
                 <div class="card">
                     <h3>Total Products</h3>

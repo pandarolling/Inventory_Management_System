@@ -80,6 +80,40 @@
         </div>
 
         <div class="separator-line"> </div>
+
+        <!-- ============================================================= -->
+        <!-- TODO: FEATURES TO ADD ON THIS PAGE (Catalog / catalog.html)    -->
+        <!-- ============================================================= -->
+
+        <div class="mid-area">
+
+            <!-- HTML FEATURES:
+                 1. Add page heading: <h2>Product Catalog</h2>
+                 2. Add a table showing ALL products with columns:
+                    Product Name | SKU | Category | Price | Quantity | Status
+                    Use the same <table> structure as index.html
+                 3. Add a filter dropdown: <select id="filter-category">
+                    with options: All, Accessories, Cables, Chargers, Audio
+                 4. Add a product count: <p id="product-count">Showing X products</p>
+            -->
+
+            <!-- JS FEATURES (use script.js):
+                 1. FILTER BY CATEGORY — when #filter-category changes,
+                    show/hide table rows based on their category column
+                    Hint: select.addEventListener("change", ...) → loop rows → row.style.display
+
+                 2. SEARCH FILTER — reuse the #search-bar to filter catalog rows
+                    Hint: same logic as dashboard search
+
+                 3. SORT BY COLUMN — click a <th> to sort the table by that column
+                    Hint: Array.from(tbody.rows).sort(...) → re-append sorted rows
+
+                 4. UPDATE COUNT — after any filter/search, update #product-count
+                    to show how many visible rows remain
+                    Hint: querySelectorAll("tbody tr:not([style*='display: none'])").length
+            -->
+
+        </div>
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

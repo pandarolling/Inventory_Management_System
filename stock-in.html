@@ -78,6 +78,49 @@
         </div>
 
         <div class="separator-line"> </div>
+
+        <!-- ============================================================= -->
+        <!-- TODO: FEATURES TO ADD ON THIS PAGE (Stock In / stock-in.html)  -->
+        <!-- ============================================================= -->
+
+        <div class="mid-area">
+
+            <!-- HTML FEATURES:
+                 1. Add page heading: <h2>Stock In</h2>
+                    and subtitle: <p>Record incoming stock</p>
+                 2. Add a form (use same .input-area style as add-product.html):
+                    - Product Name (dropdown <select> of existing products)
+                    - SKU (text input, auto-fill when product selected)
+                    - Quantity Received (number input)
+                    - Supplier (text input)
+                    - Date Received (<input type="date">)
+                    - Submit button: <button id="stock-in-btn">Record Stock In</button>
+                 3. Add a "Recent Stock-In" table below the form:
+                    Columns: Date | Product | SKU | Qty Added | Supplier
+            -->
+
+            <!-- JS FEATURES (use script.js):
+                 1. FORM VALIDATION — when submit is clicked, check all fields
+                    are filled. If empty, show alert("Please fill all fields")
+                    Hint: if (!input.value) { alert(...); return; }
+
+                 2. ADD TO TABLE — on valid submit, create a new <tr> with the
+                    form values and prepend it to the Recent Stock-In table
+                    Hint: tbody.insertRow(0)
+
+                 3. CLEAR FORM — after adding, reset all inputs to empty
+                    Hint: form.reset() or input.value = ""
+
+                 4. AUTO-FILL SKU — when a product is selected from dropdown,
+                    auto-fill the SKU field
+                    Hint: use a JS object like { "Wireless Mouse": "MS-WRLS-01" }
+
+                 5. SAVE TO LOCALSTORAGE — save each stock-in entry so it
+                    persists on page reload
+                    Hint: localStorage.setItem("stockIn", JSON.stringify(entries))
+            -->
+
+        </div>
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

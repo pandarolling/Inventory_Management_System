@@ -78,6 +78,47 @@
         </div>
 
         <div class="separator-line"> </div>
+
+        <!-- ============================================================= -->
+        <!-- TODO: FEATURES TO ADD ON THIS PAGE (Stock Out / stock-out.html) -->
+        <!-- ============================================================= -->
+
+        <div class="mid-area">
+
+            <!-- HTML FEATURES:
+                 1. Add page heading: <h2>Stock Out</h2>
+                    and subtitle: <p>Record outgoing stock</p>
+                 2. Add a form (use same .input-area style as add-product.html):
+                    - Product Name (dropdown <select> of existing products)
+                    - SKU (text input, auto-fill when product selected)
+                    - Quantity Dispatched (number input)
+                    - Destination / Customer (text input)
+                    - Date Dispatched (<input type="date">)
+                    - Submit button: <button id="stock-out-btn">Record Stock Out</button>
+                 3. Add a "Recent Stock-Out" table below the form:
+                    Columns: Date | Product | SKU | Qty Removed | Destination
+            -->
+
+            <!-- JS FEATURES (use script.js):
+                 1. FORM VALIDATION — same as stock-in: check all fields filled
+                    Hint: if (!input.value) { alert(...); return; }
+
+                 2. QUANTITY CHECK — before submitting, check that dispatched qty
+                    does not exceed available stock. Show alert if it does.
+                    Hint: compare input qty vs stored product qty
+
+                 3. ADD TO TABLE — on valid submit, add a new row to the
+                    Recent Stock-Out table
+                    Hint: tbody.insertRow(0)
+
+                 4. CLEAR FORM — reset form after successful submission
+                    Hint: input.value = ""
+
+                 5. SAVE TO LOCALSTORAGE — save stock-out entries for persistence
+                    Hint: localStorage.setItem("stockOut", JSON.stringify(entries))
+            -->
+
+        </div>
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

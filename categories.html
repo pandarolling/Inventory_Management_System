@@ -78,6 +78,42 @@
         </div>
 
         <div class="separator-line"> </div>
+
+        <!-- ============================================================= -->
+        <!-- TODO: FEATURES TO ADD ON THIS PAGE (Categories / categories.html) -->
+        <!-- ============================================================= -->
+
+        <div class="mid-area">
+
+            <!-- HTML FEATURES:
+                 1. Add page heading: <h2>Categories</h2>
+                 2. Add category cards using the same .data-grid layout:
+                    Each card shows: Category Name + Product Count
+                    e.g. <div class="card"><h3>Accessories</h3><p class="metric">5 products</p></div>
+                 3. Add an "Add Category" button: <button id="add-category-btn">+ Add Category</button>
+                 4. Add an input field (hidden by default):
+                    <input type="text" id="new-category-name" placeholder="Category name" style="display:none">
+            -->
+
+            <!-- JS FEATURES (use script.js):
+                 1. SHOW/HIDE INPUT — when #add-category-btn is clicked,
+                    toggle the #new-category-name input visible/hidden
+                    Hint: element.style.display = (element.style.display === "none") ? "block" : "none"
+
+                 2. ADD CATEGORY CARD — when user types a name and presses Enter,
+                    create a new .card div and append it to .data-grid
+                    Hint: addEventListener("keypress", e => { if(e.key === "Enter") ... })
+
+                 3. DELETE CATEGORY — add a small "X" button on each card,
+                    clicking it removes that card
+                    Hint: card.remove()
+
+                 4. CLICK TO VIEW — clicking a category card could filter/redirect
+                    to catalog.html showing only that category's products
+                    Hint: window.location.href = "catalog.html?category=" + name
+            -->
+
+        </div>
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

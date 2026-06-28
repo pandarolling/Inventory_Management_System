@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Alerts</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Alerts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<aside>
+    <aside>
         <div class="logo-section">
             <div class="logo">
                 <img src="logo.jpeg" alt="" id="logo-icon">
@@ -29,7 +32,7 @@
                 <a href="catalog.html">Catalog</a>
             </div>
             <div class="categories">
-               <a href="categories.html">Categories</a> 
+                <a href="categories.html">Categories</a>
             </div>
         </div>
 
@@ -56,10 +59,10 @@
             </div>
         </div>
 
-        
+
     </aside>
-   <div class="page">
-        <div class="top-area">      
+    <div class="page">
+        <div class="top-area">
             <div class="profile-section">
 
                 <button id="profile-letter">T</button>
@@ -73,14 +76,61 @@
                     </div>
                 </div>
             </div>
-            <input type="text" placeholder="Seach SKU, products..." id= "search-bar">
+            <input type="text" placeholder="Seach SKU, products..." id="search-bar">
 
         </div>
 
         <div class="separator-line"> </div>
+
+        <!-- ============================================================= -->
+        <!-- TODO: FEATURES TO ADD ON THIS PAGE (Alerts / alerts.html)      -->
+        <!-- ============================================================= -->
+
+        <div class="mid-area">
+
+            <!-- HTML FEATURES:
+                 1. Add page heading: <h2>Alerts</h2>
+                    and subtitle: <p>Stock alerts and notifications</p>
+                 2. Add alert cards (use .data-grid + .card layout):
+                    - Low Stock card: <div class="card warning"><h3>Low Stock</h3><p>Mechanical Keyboard — 8 units left</p></div>
+                    - Out of Stock card: <div class="card error"><h3>Out of Stock</h3><p>HDMI Cable 6ft — 0 units</p></div>
+                 3. Add a "Dismiss All" button: <button id="dismiss-all">Dismiss All</button>
+                 4. Add a badge count: <span class="badge badge-danger" id="alert-count">2</span>
+            -->
+
+            <!-- JS FEATURES (use script.js):
+                 1. AUTO-GENERATE ALERTS — read products from localStorage,
+                    loop through them, create alert cards for items where qty < 10
+                    Hint: products.filter(p => p.qty < 10).forEach(p => create card)
+
+                 2. DISMISS SINGLE — add an "X" button on each alert card,
+                    clicking it removes that one card
+                    Hint: btn.addEventListener("click", () => card.remove())
+
+                 3. DISMISS ALL — clicking #dismiss-all removes all alert cards
+                    Hint: document.querySelectorAll(".card").forEach(c => c.remove())
+
+                 4. UPDATE COUNT — after dismissing, update #alert-count number
+                    Hint: alertCount.textContent = document.querySelectorAll(".card").length
+
+                 5. COLOR CODING — use .warning class for low stock (qty 1-9)
+                    and .error class for out of stock (qty 0)
+                    (classes already exist in style.css)
+            -->
+
+        </div>
     </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

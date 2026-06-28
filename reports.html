@@ -78,6 +78,52 @@
         </div>
 
         <div class="separator-line"> </div>
+
+        <!-- ============================================================= -->
+        <!-- TODO: FEATURES TO ADD ON THIS PAGE (Reports / reports.html)    -->
+        <!-- ============================================================= -->
+
+        <div class="mid-area">
+
+            <!-- HTML FEATURES:
+                 1. Add page heading: <h2>Reports</h2>
+                    and subtitle: <p>Inventory reports and summaries</p>
+                 2. Add summary cards (use .data-grid + .card layout):
+                    - Total Products card
+                    - Total Inventory Value card
+                    - Total Stock-In Transactions card
+                    - Total Stock-Out Transactions card
+                 3. Add a "Transaction History" table:
+                    Columns: Date | Type (In/Out) | Product | SKU | Quantity | By
+                 4. Add date filter inputs:
+                    <label>From: <input type="date" id="date-from"></label>
+                    <label>To: <input type="date" id="date-to"></label>
+                    <button id="filter-btn">Filter</button>
+                 5. Add an export button: <button id="export-btn">Export CSV</button>
+            -->
+
+            <!-- JS FEATURES (use script.js):
+                 1. LOAD DATA — read products, stockIn, and stockOut arrays
+                    from localStorage and display them in the table
+                    Hint: JSON.parse(localStorage.getItem("products")) || []
+
+                 2. CALCULATE TOTALS — compute summary numbers for the cards
+                    (total products, sum of qty*price for value, count transactions)
+                    Hint: products.reduce((sum, p) => sum + (p.qty * p.price), 0)
+
+                 3. DATE FILTER — when #filter-btn is clicked, show only table
+                    rows where date falls between #date-from and #date-to
+                    Hint: new Date(row.date) >= new Date(fromDate)
+
+                 4. EXPORT CSV — when #export-btn is clicked, convert the visible
+                    table data into a CSV string and trigger a download
+                    Hint: create a Blob, use URL.createObjectURL, click a hidden <a>
+
+                 5. SORT TABLE — click column headers to sort ascending/descending
+                    Hint: same sort logic as catalog page
+            -->
+
+        </div>
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
